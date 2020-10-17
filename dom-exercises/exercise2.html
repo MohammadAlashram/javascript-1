@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,9 +13,26 @@
     </style>
     <script>
         /* TODO: write JS code here */
+
+        //onload func
+        function myFunction() {
+        style.backgroundColor = "blue";
+        }
+
+        //onclick func
+         var firstColor = 0
+         function colorChange(){
+         var colors=['red','green','blue']
+         document.getElementById("mydiv").style.backgroundColor=colors[firstColor];
+         firstColor++;
+         if(firstColor===3)
+            {
+              firstColor=0;
+            }   
+        }
     </script>
 </head>
 <body>
-<div id="mydiv"></div>
+<div id="mydiv" onclick="colorChange()" onload="myFunction()"></div>
 </body>
 </html>
